@@ -1,6 +1,5 @@
-<form action="{{ route('product.update', $product->id) }}" method="POST">
+<form action="{{ route('product.update', $product->id) }}" method="GET">
     @csrf
-    @method('PUT')
     <div>
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" value="{{ old('name', $product->name) }}" required>
